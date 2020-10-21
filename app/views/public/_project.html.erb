@@ -16,21 +16,21 @@
         <% if(project.image1.attached?)%>
             <%= image_tag project.image1,{class:'project__image'}%>
         <% else%>
-            <%= image_tag 'image',{class:'project__image'}%>
+            <%= image_tag 'image.png',{class:'project__image'}%>
     </a>
     <% end%>
     <a href="/projects/<%=project.id%>%">
         <% if(project.image2.attached?)%>
             <%= image_tag project.image2,{class:'project__image'}%>
         <% else%>
-            <%= image_tag 'image',{class:'project__image'}%>
+            <%= image_tag 'image.png',{class:'project__image'}%>
         <% end%>
     </a>
     <a href="/projects/<%=project.id%>%">
         <% if(project.image3.attached?)%>
             <%= image_tag project.image3,{class:'project__image'}%>
         <% else%>
-            <%= image_tag 'image',{class:'project__image'}%>
+            <%= image_tag 'image.png',{class:'project__image'}%>
         <% end%>   
     </a>
 

@@ -1,6 +1,6 @@
 <div class="imageUpload">
     <label for="<%="project_image"+imageNumber.to_s%>">
-        <%=image_tag 'image', class:"summary__image section__image imageUploader"%>
+        <%=image_tag 'image.png', class:"summary__image section__image imageUploader"%>
     </label>
     <input type="file" name="project[<%="image"+imageNumber.to_s%>]" id="<%="project_image"+imageNumber.to_s%>"/>
     <%= form.file_field(":image"+imageNumber.to_s) %>

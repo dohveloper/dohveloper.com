@@ -17,7 +17,7 @@
             <% if(@project.image1.attached?)%>
               <%= image_tag @project.image1 , class:"summary__image section__image imageUploader"%>
             <% else%>
-              <%=image_tag 'image', class:"summary__image section__image imageUploader"%>
+              <%=image_tag 'image.png', class:"summary__image section__image imageUploader"%>
             <% end%>
         </div>
     </div>
@@ -38,13 +38,13 @@
                 <% if(@project.image2.attached?)%>
                   <%=image_tag @project.image2, class:"section__image imageUploader solution__image"%>
                 <% else%>
-                  <%=image_tag 'image', class:"section__image imageUploader solution__image"%>
+                  <%=image_tag 'image.png', class:"section__image imageUploader solution__image"%>
                 <% end%>
                               
                 <% if(@project.image3.attached?)%>
                   <%=image_tag @project.image3, class:"section__image imageUploader solution__image"%>
                 <% else%>
-                  <%=image_tag 'image', class:"section__image imageUploader solution__image"%>
+                  <%=image_tag 'image.png', class:"section__image imageUploader solution__image"%>
                 <% end%>
             </div>
         </div>
@@ -57,7 +57,7 @@
             <% if(@project.image4.attached?)%>
               <%=image_tag @project.image4, class:"section__image imageUploader outcome__image"%>
             <% else%>
-              <%=image_tag 'image', class:"section__image imageUploader outcome__image"%>
+              <%=image_tag 'image.png', class:"section__image imageUploader outcome__image"%>
             <% end%>
             </div>
             <p class="section__description outcome__description"> <%= @project.outcome %></p>
