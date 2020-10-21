@@ -1,0 +1,345 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.form {
+  background: none;
+  border: none;
+  outline: none;
+  &::placeholder {
+    color: #cecece;
+  }
+  &__summaryCategory {
+    width: 70px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  &__summaryHeader {
+    font-weight: 800;
+    font-size: 2.6rem;
+    margin: 0;
+    border: none;
+    color: black;
+    opacity: 1;
+  }
+  &__summaryDescription {
+    font-weight: 700;
+    font-size: 1.3rem;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    border: none;
+    color: black;
+    opacity: 1;
+
+    &::placeholder {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.2rem;
+    }
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    height: auto;
+    padding: 0px;
+    font-weight: 500;
+    color: #606060;
+
+    text-align: justify;
+  }
+  &__summaryContent {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0px;
+    font-weight: 300;
+    color: #606060;
+  }
+  &__textArea {
+    &::placeholder {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.2rem;
+    }
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    min-height: 200px;
+    height: auto;
+    padding: 0px;
+    font-weight: 500;
+    color: #606060;
+
+    text-align: justify;
+  }
+  &__challengeContent {
+    width: 100%;
+  }
+  &__solutionContent {
+    max-width: 600px;
+    width: 560px;
+    height: 530px;
+  }
+  &__outcomeContent {
+    width: 500px;
+    height: 300px;
+    margin-top: 30px;
+  }
+  &__commentContent {
+    font-family: 'Gloria Hallelujah', cursive;
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+  }
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  width: 1050px;
+  margin: 0 auto;
+  max-height: 100px;
+  padding: 20px;
+
+  background-color: #f5f5f5;
+  box-shadow: 5px 5px 4px #f5f5f5;
+}
+.topbar__button {
+  width: 120px;
+  height: 40px;
+  font-size: 1rem;
+  box-shadow: 4px 4px 1px black;
+  margin: 0 10px;
+  border-color: grey;
+  outline: none;
+  cursor: pointer;
+  &--back {
+    width: 60px;
+    height: 38px;
+    border: none;
+    color: grey;
+    background: #f5f5f5;
+    transition: all 0.1s ease-in-out;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    letter-spacing: 1px;
+    &:hover {
+      background: #e6e6e6;
+    }
+    &:active {
+      opacity: 1;
+      box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+
+      color: rgb(177, 177, 177);
+    }
+  }
+  &--backIcon {
+    margin: 10px 20px;
+    width: 20px;
+    outline: none;
+  }
+
+  &--cancel {
+    width: 110px;
+    height: 38px;
+    border: none;
+    color: grey;
+    background: #f5f5f5;
+    transition: all 0.1s ease-in-out;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    letter-spacing: 1px;
+    &:hover {
+      background: #e6e6e6;
+    }
+    &:active {
+      opacity: 1;
+      box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+
+      color: rgb(177, 177, 177);
+    }
+  }
+  &--confirm {
+    border: none;
+    color: white;
+    background: rgb(71, 71, 71);
+    transition: all 0.1s ease-in-out;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    letter-spacing: 1px;
+    &:hover {
+      background: rgb(116, 116, 116);
+    }
+    &:active {
+      opacity: 1;
+      box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+
+      color: #79e3b6;
+    }
+  }
+}
+.detailContainer {
+  width: 100%;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.summary {
+  display: flex;
+  width: 100%;
+  margin: 100px 0 160px 0;
+
+  &__category {
+    background-color: #f45353;
+    width: 70px;
+    text-align: center;
+    padding: 3px 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  &__header {
+    font-weight: 800;
+    font-size: 2.6rem;
+  }
+
+  &__description {
+    margin: 0 0 20px 0;
+  }
+  &__icon {
+    margin-right: 10px;
+  }
+  &__content {
+    width: 100%;
+  }
+  &__imageContainer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__image {
+    max-width: 400px;
+    width: 100%;
+    margin: 12px;
+  }
+}
+
+.section {
+  margin-bottom: 120px;
+  &__header {
+    font-weight: 800;
+    font-size: 2rem;
+    margin: 40px 0px;
+  }
+
+  &__headerLine {
+    width: 200px;
+    height: 12px;
+    background-color: black;
+    margin-bottom: 40px;
+  }
+  &__content {
+    display: flex;
+  }
+  &__description {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    text-align: justify;
+  }
+  &__image {
+    box-shadow: 16px 16px 2px #e84a5f;
+    border: 4px solid black;
+    border-radius: 4px;
+    max-width: 400px;
+  }
+}
+.challenge {
+  &__header {
+    margin-bottom: 40px;
+  }
+  &__description {
+  }
+}
+.solution {
+  &__content {
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__descriptionContainer {
+    width: 1000px;
+  }
+  &__description {
+    margin-right: 50px;
+  }
+  &__imageContainer {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__image {
+    margin: 20px;
+    margin-left: 30px;
+    max-width: 350px;
+  }
+}
+.outcome {
+  &__content {
+  }
+  &__imageContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    margin-right: 80px;
+    max-width: 350px;
+  }
+  &__description {
+    width: 1000px;
+    height: 250px;
+    margin-bottom: 0px;
+  }
+}
+.comment {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Gloria Hallelujah', cursive;
+  background-color: white;
+  padding: 60px;
+  box-shadow: 5px 5px 2px grey;
+  &__header {
+    align-self: center;
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.imageUploader {
+  cursor: pointer;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.imageUpload > input {
+  display: none;
+}
+.imageFormFiledForErrorFix {
+  display: none;
+}

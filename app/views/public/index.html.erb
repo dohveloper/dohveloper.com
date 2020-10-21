@@ -1,0 +1,33 @@
+    
+    
+  <div class="container">  
+    <div class="content">   
+      <section class="projects">
+        <div class="projects__header">
+          <div>
+           <h1 class="section__header">Doh's Projects</h1>
+           <h4 class="section__subhead">CODING <i class="fas fa-circle fa-xs circleIcon"></i>DESIGN<i class="fas fa-circle fa-xs circleIcon"></i>PRODUCT</h4>
+          </div>
+          <% if user_signed_in? %>
+            <a href="/projects/new"><i class="fas fa-plus fa-3x section__headerIcon"></i></i></a>
+          <%end%>
+        </div>
+
+        <% @projects.each do |project| %>
+          <%= render partial: "project", locals: { project: project } %>
+        <% end %>
+     
+        
+      </section>
+
+
+        <div class="footer">
+          <% if user_signed_in? %>
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class=>"dohkim dohkim--signout" %>
+          <% else %> 
+            <a href="/users/sign_in" class="dohkim">Doh Kim</a>
+          <% end %>
+            <span class="doh">@dohveloper</span>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,88 @@
+
+
+<%= form_with(model: project, local: true) do |form| %>
+    <% if project.errors.any? %>
+        <div id="error_explanation">
+        <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+        <ul>
+            <% project.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+        </ul>
+        </div>
+    <% end %>
+    <%=render 'adminbar' , project: @project%>
+    <div class="detailContainer">  
+        <div class="summary">
+            <div class="summary__content">
+                <div class="summary__category"><%= form.text_field :category, autocomplete: 'off',placeholder: "DEV", class: 'form form__summaryCategory'   %></div>
+                <h1 class="summary__header"><%= form.text_field :title, autocomplete: 'off',placeholder: "Project title goes here", class: 'form form__summaryHeader'  %> </h1>
+                <h2 class="summary__description"><%= form.text_area :description, placeholder: "Description goes here", class: 'form form__summaryDescription'  %></h2> 
+                
+                <h2><i class="fa fa-exclamation-triangle summary__icon"></i>Challenge</h2>
+                <%= form.text_field :summaryOfChallenge, autocomplete: 'off',placeholder: "Challenge summary goes here", class: 'form form__summaryContent'  %> 
+                <h2><i class="fa fa-exclamation-triangle summary__icon"></i>Solution</h2>
+                <%= form.text_field :summaryOfSolution, autocomplete: 'off',placeholder: "Solution summary goes here", class: 'form form__summaryContent'  %> 
+                <h2><i class="fa fa-exclamation-triangle summary__icon"></i>Outcome</h2>
+                <%= form.text_field :summaryOfOutcome, autocomplete: 'off',placeholder: "Outcome summary goes here", class: 'form form__summaryContent'  %> 
+                
+            </div>
+            <div class="summary__imageContainer">
+                    <%= render partial: "imageUploader", locals: {form:form,imageNumber: 1} %>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section__header challenge__header">1.&nbsp;Challenge</h2>
+            <%= form.text_area :challenge, placeholder: "Write down challenges of this project. Why did you start this project? ", class: 'form form__textArea form__challengeContent'  %> 
+            
+        </div>
+
+        <div class="section">
+            <h2 class="section__header">2.&nbsp;Solution</h2>
+            <div class="section__content">
+                <div class="section__descriptionContainer">
+                    <%= form.text_area :solution, placeholder: "Write down solution of this project. Why did you start this project? ", class: 'form form__textArea form__solutionContent'  %> 
+                </div>
+                <div class="solution__imageContainer">
+                    <%= render partial: "imageUploader", locals: {form:form,imageNumber: 2} %>
+                    <%= render partial: "imageUploader", locals: {form:form,imageNumber: 3} %>
+                </div>
+            </div>
+        </div>  
+
+        <div class="section">
+            <h2 class="section__header ">3.&nbsp;Outcome</h2>
+            <div class="section__content">
+                <%= render partial: "imageUploader", locals: {form:form,imageNumber: 4} %>
+                <%= form.text_area :outcome, placeholder: "Write down solution of this project. Why did you start this project? ", class: 'form form__textArea form__outcomeContent'  %> 
+                
+            </div>
+        </div>
+        
+        <div class="comment">
+            <h2 class="section__header comment__header">Comment</h2>
+            <%= form.text_area :comment, placeholder: "Write down solution of this project. Why did you start this project? ", class: 'form form__textArea form__commentContent'  %> 
+        </div>
+
+        <div class="imageFormFiledForErrorFix">
+        
+        </div>
+        
+
+        
+
+        <div class="footer">
+            <span class="dohkim">Doh Kim</span>
+            <span class="doh">@dohveloper</span>
+        </div>
+        
+    </div>
+<% end %>
+
+
+
+
+
+

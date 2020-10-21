@@ -1,0 +1,80 @@
+
+<%= render 'adminbar'%>
+
+<div class="detailContainer">  
+    <div class="summary">
+        <div class="summary__content">
+            <div class="summary__category"><%= @project.category %></div>
+            <h1 class="summary__header"><%= @project.title %></h1>
+            <h2><i class="fa fa-exclamation-triangle summary__icon"></i>Challenge</h2>
+            <p> <%= @project.summaryOfChallenge %></p>
+            <h2><i class="fa fa-exclamation-triangle summary__icon"></i>Solution</h2>
+            <p> <%= @project.summaryOfSolution %></p>
+            <h2><i class="fa fa-exclamation-triangle summary__icon"></i>Outcome</h2>
+            <p> <%= @project.summaryOfOutcome %></p>    
+        </div>
+        <div class="summary__imageContainer">
+            <% if(@project.image1.attached?)%>
+              <%= image_tag @project.image1 , class:"summary__image section__image imageUploader"%>
+            <% else%>
+              <%=image_tag 'image', class:"summary__image section__image imageUploader"%>
+            <% end%>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section__header challenge__header">1.&nbsp;Challenge</h2>
+        <p class="section__description challenge__description"><%= @project.challenge %></p>
+    </div>
+
+    <div class="section">
+        <h2 class="section__header">2.&nbsp;Solution</h2>
+        <div class="section__content">
+            <div class="section__descriptionContainer">
+                <p class="section__description solution__description"><%= @project.solution %></p>
+            </div>
+            <div class="solution__imageContainer">
+                
+                <% if(@project.image2.attached?)%>
+                  <%=image_tag @project.image2, class:"section__image imageUploader solution__image"%>
+                <% else%>
+                  <%=image_tag 'image', class:"section__image imageUploader solution__image"%>
+                <% end%>
+                              
+                <% if(@project.image3.attached?)%>
+                  <%=image_tag @project.image3, class:"section__image imageUploader solution__image"%>
+                <% else%>
+                  <%=image_tag 'image', class:"section__image imageUploader solution__image"%>
+                <% end%>
+            </div>
+        </div>
+    </div>  
+
+    <div class="section">
+        <h2 class="section__header ">3.&nbsp;Outcome</h2>
+        <div class="outcome__content section__content">
+        <div class="outcome__imageContainer">
+            <% if(@project.image4.attached?)%>
+              <%=image_tag @project.image4, class:"section__image imageUploader outcome__image"%>
+            <% else%>
+              <%=image_tag 'image', class:"section__image imageUploader outcome__image"%>
+            <% end%>
+            </div>
+            <p class="section__description outcome__description"> <%= @project.outcome %></p>
+            
+        </div>
+    </div>
+    
+    <div class="comment">
+        <h2 class="section__header comment__header">Comment</h2>
+        <p class="section__description"> <%= @project.comment %></p>
+    </div>
+     <div class="footer">
+            <span class="dohkim">Doh Kim</span>
+            <span class="doh">@dohveloper</span>
+        </div>
+</div>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

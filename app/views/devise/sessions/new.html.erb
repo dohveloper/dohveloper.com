@@ -1,0 +1,32 @@
+
+<% if notice %>
+  <p class="login__notice alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="login__notice alert alert-danger"><%= alert %></p>
+<% end %>
+
+<div class="loginContainer">
+<div class="loginBox">
+
+<h2 class="login__header">Admin</h2>
+<div class="login__text">This is only for admin</div>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="login__field">
+    <%= f.email_field :email, placeholder: "Hey who are you?", autofocus: true, autocomplete: "off",class:"login__input" %>
+  </div>
+
+  <div class="login__field">
+    <%= f.password_field :password,placeholder: "This is for me! " , autocomplete: "off",class:"login__input" %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit "Log in" ,class:'login__button' %>
+  </div>
+<% end %>
+
+</div>
+</div>

@@ -1,0 +1,13 @@
+
+
+    <div class="topbar">
+       <a href="/" class="topbar__button topbar__button--back"><input class="topbar__button--backIcon" type="image" src="<%=image_url "back.png"%>" /></a></button>
+        
+
+        <div class="topbar__buttons">
+            <% if user_signed_in? %>
+                <a href='/'><button  class="topbar__button topbar__button--cancel">Cancel</button></a>
+                <button type="submit" class="topbar__button topbar__button--confirm">Confirm</button>
+            <% end %>
+        </div>  
+    </div>
