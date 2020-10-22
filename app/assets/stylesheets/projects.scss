@@ -275,9 +275,11 @@
   }
   &__descriptionContainer {
     width: 1000px;
+    white-space: pre;
   }
   &__description {
-    margin-right: 50px;
+    margin: 0;
+    margin-top: -10px;
   }
   &__imageContainer {
     width: 100%;
