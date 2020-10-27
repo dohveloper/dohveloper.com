@@ -253,7 +253,6 @@
     line-height: 2.2rem;
     font-weight: 400;
     text-align: justify;
-    white-space: pre;
   }
   &__image {
     box-shadow: 16px 16px 2px #e84a5f;
@@ -276,11 +275,11 @@
   }
   &__descriptionContainer {
     width: 1000px;
+    white-space: pre;
   }
   &__description {
     margin: 0;
-    margin-top: 10px;
-    white-space: pre;
+    margin-top: -10px;
   }
   &__imageContainer {
     width: 100%;
@@ -312,7 +311,6 @@
     width: 1000px;
     height: 250px;
     margin-bottom: 0px;
-    white-space: pre;
   }
 }
 .comment {
